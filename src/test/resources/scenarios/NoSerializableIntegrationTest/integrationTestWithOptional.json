@@ -1,0 +1,23 @@
+{
+  "testId" : "NoSerializableIntegrationTest#integrationTestWithOptional",
+  "outputs" : [ {
+    "index" : 2,
+    "caller" : "com.snapmocklib.example.classes.NoSerializeTypesService.getEnumByName",
+    "args" : {
+      "name" : "VALUE1"
+    },
+    "exception" : false,
+    "returnType" : "java.util.Optional;com.snapmocklib.example.models.EnumTest",
+    "result" : "VALUE1"
+  } ],
+  "steps" : [ {
+    "index" : 1,
+    "caller" : "com.snapmocklib.example.classes.NoSerializeTypesIntegrationService.getEnumByName",
+    "args" : {
+      "name" : "VALUE1"
+    },
+    "exception" : false,
+    "returnType" : "java.util.Optional;com.snapmocklib.example.models.EnumTest",
+    "result" : "VALUE1"
+  } ]
+}

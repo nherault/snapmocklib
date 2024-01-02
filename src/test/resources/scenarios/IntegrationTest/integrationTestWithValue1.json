@@ -1,0 +1,61 @@
+{
+  "testId" : "IntegrationTest#integrationTestWithValue1",
+  "outputs" : [ {
+    "index" : 3,
+    "caller" : "com.snapmocklib.example.classes.MyFirstOutputImpl.myFirstOutputMethod",
+    "args" : {
+      "integerParam" : 1,
+      "uuidParam" : null
+    },
+    "exception" : false,
+    "returnType" : "com.snapmocklib.example.models.EnumTest",
+    "result" : "VALUE1"
+  }, {
+    "index" : 4,
+    "caller" : "com.snapmocklib.example.classes.MySecondOutputImpl.mySecondOutputMethod",
+    "args" : {
+      "integerParam" : 0
+    },
+    "exception" : false,
+    "returnType" : "com.snapmocklib.example.models.SecondOutputResult",
+    "result" : {
+      "integerParam" : 1
+    }
+  }, {
+    "index" : 5,
+    "caller" : "com.snapmocklib.example.classes.MyThirdOutputImpl.myThirdOutputMethod",
+    "args" : { },
+    "exception" : false,
+    "returnType" : "void",
+    "result" : null
+  } ],
+  "steps" : [ {
+    "index" : 2,
+    "caller" : "com.snapmocklib.example.classes.MyStepImpl.myStepMethod",
+    "args" : {
+      "integerParam" : 1,
+      "uuidParam" : null
+    },
+    "exception" : false,
+    "returnType" : "void",
+    "result" : null
+  }, {
+    "index" : 1,
+    "caller" : "com.snapmocklib.example.classes.MyApiService.methodToTest",
+    "args" : {
+      "integerParam" : 1
+    },
+    "exception" : false,
+    "returnType" : "com.snapmocklib.example.models.TestResult",
+    "result" : {
+      "partialResults" : [ {
+        "uuidParam" : null,
+        "dateParam" : null,
+        "integerParam" : 0
+      } ],
+      "secondOutputResults" : [ {
+        "integerParam" : 1
+      } ]
+    }
+  } ]
+}

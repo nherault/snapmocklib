@@ -1,0 +1,78 @@
+{
+  "testId" : "IntegrationTest#integrationTestWithValue2",
+  "outputs" : [ {
+    "index" : 3,
+    "caller" : "com.snapmocklib.example.classes.MyFirstOutputImpl.myFirstOutputMethod",
+    "args" : {
+      "integerParam" : 2,
+      "uuidParam" : null
+    },
+    "exception" : false,
+    "returnType" : "com.snapmocklib.example.models.EnumTest",
+    "result" : "VALUE2"
+  }, {
+    "index" : 4,
+    "caller" : "com.snapmocklib.example.classes.MySecondOutputImpl.mySecondOutputMethod",
+    "args" : {
+      "integerParam" : 0
+    },
+    "exception" : false,
+    "returnType" : "com.snapmocklib.example.models.SecondOutputResult",
+    "result" : {
+      "integerParam" : 1
+    }
+  }, {
+    "index" : 5,
+    "caller" : "com.snapmocklib.example.classes.MySecondOutputImpl.mySecondOutputMethod",
+    "args" : {
+      "integerParam" : 1
+    },
+    "exception" : false,
+    "returnType" : "com.snapmocklib.example.models.SecondOutputResult",
+    "result" : {
+      "integerParam" : 2
+    }
+  }, {
+    "index" : 6,
+    "caller" : "com.snapmocklib.example.classes.MyThirdOutputImpl.myThirdOutputMethod",
+    "args" : { },
+    "exception" : false,
+    "returnType" : "void",
+    "result" : null
+  } ],
+  "steps" : [ {
+    "index" : 2,
+    "caller" : "com.snapmocklib.example.classes.MyStepImpl.myStepMethod",
+    "args" : {
+      "integerParam" : 2,
+      "uuidParam" : null
+    },
+    "exception" : false,
+    "returnType" : "void",
+    "result" : null
+  }, {
+    "index" : 1,
+    "caller" : "com.snapmocklib.example.classes.MyApiService.methodToTest",
+    "args" : {
+      "integerParam" : 2
+    },
+    "exception" : false,
+    "returnType" : "com.snapmocklib.example.models.TestResult",
+    "result" : {
+      "partialResults" : [ {
+        "uuidParam" : null,
+        "dateParam" : null,
+        "integerParam" : 0
+      }, {
+        "uuidParam" : null,
+        "dateParam" : null,
+        "integerParam" : 1
+      } ],
+      "secondOutputResults" : [ {
+        "integerParam" : 1
+      }, {
+        "integerParam" : 2
+      } ]
+    }
+  } ]
+}

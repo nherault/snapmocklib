@@ -1,0 +1,12 @@
+{
+  "testId" : "NoSerializableUnitTest#unitTestWithList",
+  "outputs" : [ ],
+  "steps" : [ {
+    "index" : 1,
+    "caller" : "com.snapmocklib.example.classes.NoSerializeTypesApi.getEnums",
+    "args" : { },
+    "exception" : false,
+    "returnType" : "java.util.List",
+    "result" : [ "VALUE1", "VALUE2" ]
+  } ]
+}

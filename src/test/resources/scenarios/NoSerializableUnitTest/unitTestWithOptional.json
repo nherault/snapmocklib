@@ -1,0 +1,14 @@
+{
+  "testId" : "NoSerializableUnitTest#unitTestWithOptional",
+  "outputs" : [ ],
+  "steps" : [ {
+    "index" : 1,
+    "caller" : "com.snapmocklib.example.classes.NoSerializeTypesApi.getEnumByName",
+    "args" : {
+      "name" : "VALUE1"
+    },
+    "exception" : false,
+    "returnType" : "java.util.Optional;com.snapmocklib.example.models.EnumTest",
+    "result" : "VALUE1"
+  } ]
+}

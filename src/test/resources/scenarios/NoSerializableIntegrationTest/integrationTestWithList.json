@@ -1,0 +1,19 @@
+{
+  "testId" : "NoSerializableIntegrationTest#integrationTestWithList",
+  "outputs" : [ {
+    "index" : 2,
+    "caller" : "com.snapmocklib.example.classes.NoSerializeTypesService.getEnums",
+    "args" : { },
+    "exception" : false,
+    "returnType" : "java.util.List",
+    "result" : [ "VALUE1", "VALUE2" ]
+  } ],
+  "steps" : [ {
+    "index" : 1,
+    "caller" : "com.snapmocklib.example.classes.NoSerializeTypesIntegrationService.getEnums",
+    "args" : { },
+    "exception" : false,
+    "returnType" : "java.util.List",
+    "result" : [ "VALUE1", "VALUE2" ]
+  } ]
+}

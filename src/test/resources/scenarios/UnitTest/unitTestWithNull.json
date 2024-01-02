@@ -1,0 +1,43 @@
+{
+  "testId" : "UnitTest#unitTestWithNull",
+  "outputs" : [ {
+    "index" : 2,
+    "caller" : "com.snapmocklib.example.classes.MyFirstOutputSpi.myFirstOutputMethod",
+    "args" : {
+      "integerParam" : 0,
+      "uuidParam" : null
+    },
+    "exception" : false,
+    "returnType" : "com.snapmocklib.example.models.EnumTest",
+    "result" : null
+  }, {
+    "index" : 3,
+    "caller" : "com.snapmocklib.example.classes.MySecondOutputSpi.mySecondOutputMethod",
+    "args" : {
+      "integerParam" : null
+    },
+    "exception" : false,
+    "returnType" : "com.snapmocklib.example.models.SecondOutputResult",
+    "result" : null
+  }, {
+    "index" : 4,
+    "caller" : "com.snapmocklib.example.classes.MyThirdOutputSpi.myThirdOutputMethod",
+    "args" : { },
+    "exception" : false,
+    "returnType" : "void",
+    "result" : null
+  } ],
+  "steps" : [ {
+    "index" : 1,
+    "caller" : "com.snapmocklib.example.classes.MyApi.methodToTest",
+    "args" : {
+      "integerParam" : 0
+    },
+    "exception" : false,
+    "returnType" : "com.snapmocklib.example.models.TestResult",
+    "result" : {
+      "partialResults" : [ ],
+      "secondOutputResults" : [ ]
+    }
+  } ]
+}

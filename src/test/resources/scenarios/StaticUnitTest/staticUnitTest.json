@@ -1,0 +1,50 @@
+{
+  "testId" : "StaticUnitTest#staticUnitTest",
+  "outputs" : [ ],
+  "steps" : [ {
+    "index" : 1,
+    "caller" : "com.snapmocklib.example.unit.StaticUnitTest$MyMapper.map",
+    "args" : {
+      "objectToMap" : {
+        "doubleParameter" : 50.1,
+        "integerParameter" : 0,
+        "objectToMap" : {
+          "doubleParameter" : 50.1,
+          "integerParameter" : 0,
+          "objectToMap" : null,
+          "objectToMaps" : [ ],
+          "stringParameter" : "myString"
+        },
+        "objectToMaps" : [ {
+          "doubleParameter" : 50.1,
+          "integerParameter" : 0,
+          "objectToMap" : null,
+          "objectToMaps" : [ ],
+          "stringParameter" : "myString"
+        } ],
+        "stringParameter" : "myString"
+      }
+    },
+    "exception" : false,
+    "returnType" : "com.snapmocklib.example.unit.StaticUnitTest$ObjectMapped",
+    "result" : {
+      "stringParameter" : "myString",
+      "integerParameter" : 0,
+      "doubleParameter" : 50.1,
+      "objectMappeds" : [ {
+        "stringParameter" : "myString",
+        "integerParameter" : 0,
+        "doubleParameter" : 50.1,
+        "objectMappeds" : [ ],
+        "objectMapped" : null
+      } ],
+      "objectMapped" : {
+        "stringParameter" : "myString",
+        "integerParameter" : 0,
+        "doubleParameter" : 50.1,
+        "objectMappeds" : [ ],
+        "objectMapped" : null
+      }
+    }
+  } ]
+}

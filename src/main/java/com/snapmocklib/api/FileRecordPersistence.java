@@ -2,8 +2,10 @@ package com.snapmocklib.api;
 
 import com.snapmocklib.utils.LogUtils;
 
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.IOException;
+import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
@@ -11,12 +13,14 @@ public class FileRecordPersistence implements RecordPersistencePort {
 
     private String recordIdDirectorySeparator = "#";
     private String directory = "scenarios";
+    private String charsetName = "UTF-8";
 
     public FileRecordPersistence() {}
 
-    public FileRecordPersistence(String directory, String recordIdDirectorySeparator) {
+    public FileRecordPersistence(String directory, String recordIdDirectorySeparator, String charsetName) {
         this.directory = directory;
         this.recordIdDirectorySeparator = recordIdDirectorySeparator;
+        this.charsetName = charsetName;
     }
 
     @Override
@@ -29,12 +33,14 @@ public class FileRecordPersistence implements RecordPersistencePort {
         if (!writeFile.exists() && !writeFile.createNewFile()) {
             throw LogUtils.errorWithException("[ERROR] Cannot create file: ${writeFile.path}");
         }
-        Files.write(Path.of(filePath), recordData.getBytes());
+        try (BufferedWriter writer = Files.newBufferedWriter(Path.of(filePath), Charset.forName(this.charsetName))) {
+            writer.write(recordData);
+        }
     }
 
     @Override
     public String getRecord(String recordId) throws IOException {
-        return Files.readString(Path.of(getFilePath(recordId)));
+        return Files.readString(Path.of(getFilePath(recordId)), Charset.forName(this.charsetName));
     }
 
     private String getFilePath(String recordId) {
